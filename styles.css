@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Codec Pro';
+  src: url('./assets/fonts/codec-pro.regular.ttf') format('truetype'),
+    url('./assets/fonts/Codec\ Pro\ ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec Pro ExtraBold';
+  src: url('./assets/fonts/Codec\ Pro\ ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --rtc-bg-color: #101728;
+  --rtc-primary-color: #ffffff;
+
+  --rtc-font-size-h1: 20px;
+  --rtc-font-mini_size-h1: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--rtc-bg-color);
+  min-height: 400svh;
+  margin: 0 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+header a {
+  color: var(--rtc-primary-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rtc--header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rtc--header-logo-img {
+  width: 30px;
+  height: 30px;
+}
+
+.rtc--header-logo-h1 {
+  display: inline-block;
+  font-family: 'Codec Pro ExtraBold';
+  font-size: var(--rtc-font-mini_size-h1);
+}
+
+.rtc--header-nav a {
+  font-family: 'Codec Pro';
+}
+
+.rtc--header-nav-list {
+  display: none;
+}
+
+@media screen and (min-width: 321px) {
+  .rtc--header-logo-h1 {
+    font-size: var(--rtc-font-size-h1);
+  }
+}
+
+@media screen and (min-width: 561px) {
+  .rtc--header-nav-list {
+    display: flex;
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .rtc--header-nav-list {
+    gap: 4rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rtc--header-nav-list {
+    gap: 8rem;
+  }
+}
