@@ -20,8 +20,13 @@
 
   --rtc-font-size-h1-xs: 16px;
   --rtc-font-size-h1-s: 20px;
-  --rtc-font-size-p-xs: 12px;
+  --rtc-font-size-h2-s: 20px;
+  --rtc-font-size-h2-m: 24px;
+  --rtc-font-size-h2-l: 32px;
+  --rtc-font-size-h2-xl: 40px;
+  --rtc-font-size-p-xs: 14px;
   --rtc-font-size-p-s: 16px;
+  --rtc-font-size-p-m: 20px;
 }
 
 * {
@@ -47,6 +52,10 @@ h2 {
   font-family: 'Codec Pro ExtraBold';
 }
 
+h2 {
+  font-size: var(--rtc-font-size-h2-s);
+}
+
 a {
   text-decoration: none;
 }
@@ -58,6 +67,11 @@ ul {
 
 span {
   color: var(--rtc-bg-color);
+}
+
+h2,
+p {
+  line-height: 1.15;
 }
 
 p,
@@ -129,7 +143,6 @@ header a,
 }
 
 .rtc--main-hero-info-h2 {
-  font-size: 20px;
   text-align: center;
 }
 
@@ -156,6 +169,20 @@ header a,
   box-shadow: -5px 5px 40px 5px #1f41bb;
 }
 
+.rtc--main-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.rtc--main-about-info {
+  color: var(--rtc-secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 2rem 8rem 2rem;
+  text-align: center;
+}
+
 @media screen and (min-width: 331px) {
   .rtc--header-logo-h1 {
     font-size: var(--rtc-font-size-h1-s);
@@ -163,18 +190,22 @@ header a,
 }
 
 @media screen and (min-width: 561px) {
+  h2 {
+    font-size: var(--rtc-font-size-h2-m);
+  }
+
   .rtc--header-nav-list {
     display: flex;
     gap: 2.5rem;
   }
 
-  .rtc--main-hero-info-h2 {
-    font-size: 24px;
-  }
-
   .rtc--main-hero-img {
     width: 16rem;
     height: 18rem;
+  }
+
+  .rtc--main-about-info {
+    padding: 2rem 4rem 8rem 4rem;
   }
 }
 
@@ -188,6 +219,15 @@ header a,
     flex-direction: row;
     justify-content: space-between;
     padding-right: 0;
+  }
+
+  h2 {
+    font-size: var(--rtc-font-size-h2-l);
+  }
+
+  p {
+    font-size: var(--rtc-font-size-p-s);
+    line-height: 1.25;
   }
 
   .rtc--main-hero {
@@ -206,12 +246,16 @@ header a,
     padding-top: 4rem;
   }
 
-  .rtc--main-hero-info-h2 {
-    font-size: 32px;
+  .rtc--main-about-info {
+    padding: 2rem 6rem 8rem 6rem;
   }
 }
 
 @media screen and (min-width: 850px) {
+  h2 {
+    font-size: var(--rtc-font-size-h2-xl);
+  }
+
   .rtc--header-nav a,
   span {
     font-size: var(--rtc-font-size-p-s);
@@ -227,10 +271,6 @@ header a,
     padding-top: 6rem;
   }
 
-  .rtc--main-hero-info-h2 {
-    font-size: 40px;
-  }
-
   .rtc--main-hero-img {
     width: 20rem;
     height: 22rem;
@@ -244,6 +284,15 @@ header a,
 
   .rtc--main-hero-info-button {
     padding: 1.1rem;
+  }
+
+  .rtc--main-about-info {
+    gap: 4rem;
+    padding: 2rem 8rem 8rem 8rem;
+  }
+
+  .rtc--main-about-info-description {
+    font-size: var(--rtc-font-size-p-m);
   }
 }
 
