@@ -31,7 +31,7 @@
 
 body {
   background-color: var(--rtc-bg-color);
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
 header {
@@ -67,6 +67,10 @@ span {
   font-weight: 900;
 }
 
+span:hover {
+  color: var(--rtc-primary-color);
+}
+
 img {
   border-radius: 1rem;
 }
@@ -76,17 +80,6 @@ p,
 header a,
 .rtc--main-hero-info-h2 {
   color: var(--rtc-primary-color);
-}
-
-.rtc--main-hero-info-button {
-  background: linear-gradient(
-    to right,
-    var(--rtc-tertiary-color),
-    var(--rtc-secondary-color)
-  );
-  border-radius: 1.5rem;
-  cursor: pointer;
-  padding: 0.75rem;
 }
 
 .rtc--header-logo {
@@ -136,7 +129,19 @@ header a,
 }
 
 .rtc--main-hero-info-h2 {
+  font-size: 20px;
   text-align: center;
+}
+
+.rtc--main-hero-info-button {
+  background: linear-gradient(
+    to right,
+    var(--rtc-tertiary-color),
+    var(--rtc-secondary-color)
+  );
+  border-radius: 1.5rem;
+  cursor: pointer;
+  padding: 0.85rem;
 }
 
 .rtc--main-hero-img_container {
@@ -145,13 +150,13 @@ header a,
 }
 
 .rtc--main-hero-img {
-  width: 80%;
+  width: 14rem;
   height: 16rem;
   object-fit: cover;
   box-shadow: -5px 5px 40px 5px #1f41bb;
 }
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 331px) {
   .rtc--header-logo-h1 {
     font-size: var(--rtc-font-size-h1-s);
   }
@@ -162,9 +167,22 @@ header a,
     display: flex;
     gap: 2.5rem;
   }
+
+  .rtc--main-hero-info-h2 {
+    font-size: 24px;
+  }
+
+  .rtc--main-hero-img {
+    width: 16rem;
+    height: 18rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    margin: 0 2rem;
+  }
+
   header {
     display: flex;
     flex-direction: row;
@@ -188,14 +206,8 @@ header a,
     padding-top: 4rem;
   }
 
-  .rtc--main-hero-img {
-    height: 17rem;
-  }
-
   .rtc--main-hero-info-h2 {
     font-size: 32px;
-    padding-left: 2rem;
-    text-align: start;
   }
 }
 
@@ -211,7 +223,7 @@ header a,
   }
 
   .rtc--main-hero-info_container {
-    gap: 6rem;
+    gap: 4rem;
     padding-top: 6rem;
   }
 
@@ -220,12 +232,28 @@ header a,
   }
 
   .rtc--main-hero-img {
-    height: 25rem;
+    width: 20rem;
+    height: 22rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  span {
+    font-size: var(--rtc-font-size-p-s);
+  }
+
+  .rtc--main-hero-info-button {
+    padding: 1.1rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .rtc--header-nav-list {
     gap: 8rem;
+  }
+
+  .rtc--main-hero-info_container {
+    gap: 6rem;
+    padding-top: 6rem;
   }
 }
