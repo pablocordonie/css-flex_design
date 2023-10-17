@@ -96,13 +96,15 @@ header a,
   color: var(--rtc-primary-color);
 }
 
-.rtc--header-logo {
+.rtc--header-logo,
+.rtc--footer-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.rtc--header-logo-img {
+.rtc--header-logo-img,
+.rtc--footer-logo-img {
   width: 30px;
   height: 30px;
 }
@@ -125,25 +127,22 @@ header a,
 }
 
 .rtc-slide {
-  min-height: 100vh;
+  padding-bottom: 8rem;
 }
 
-.rtc--main-hero {
+.rtc--main-hero,
+.rtc--main-demo {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding-bottom: 4rem;
 }
 
-.rtc--main-hero-info_container {
+.rtc--main-hero-info_container,
+.rtc--main-demo-info_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
-
-.rtc--main-hero-info-h2 {
-  text-align: center;
 }
 
 .rtc--main-hero-info-button {
@@ -157,12 +156,14 @@ header a,
   padding: 0.85rem;
 }
 
-.rtc--main-hero-img_container {
+.rtc--main-hero-img_container,
+.rtc--main-demo-img_container {
   display: flex;
   justify-content: center;
 }
 
-.rtc--main-hero-img {
+.rtc--main-hero-img,
+.rtc--main-demo-img {
   width: 14rem;
   height: 16rem;
   object-fit: cover;
@@ -174,13 +175,53 @@ header a,
   flex-direction: column;
 }
 
-.rtc--main-about-info {
-  color: var(--rtc-secondary-color);
+.rtc--main-about-info,
+.rtc--main-demo-info {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  padding: 2rem 2rem 8rem 2rem;
+  gap: 2rem;
+  padding: 0 2rem;
   text-align: center;
+}
+
+.rtc--main-about-info-h2,
+.rtc--main-demo-info-h2,
+.rtc--footer-contact-info-h2 {
+  color: var(--rtc-secondary-color);
+}
+
+.rtc--footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.rtc--footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.rtc--footer-contact-info-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rtc--footer-contact-networks > ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.rtc--footer-contact-networks-img {
+  border-radius: 0.5rem;
+  width: 25px;
+  height: 25px;
 }
 
 @media screen and (min-width: 331px) {
@@ -190,6 +231,10 @@ header a,
 }
 
 @media screen and (min-width: 561px) {
+  body {
+    margin: 0 2rem;
+  }
+
   h2 {
     font-size: var(--rtc-font-size-h2-m);
   }
@@ -210,10 +255,6 @@ header a,
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    margin: 0 2rem;
-  }
-
   header {
     display: flex;
     flex-direction: row;
