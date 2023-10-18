@@ -43,8 +43,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
 }
 
 h1,
@@ -74,6 +73,10 @@ p {
   line-height: 1.15;
 }
 
+p {
+  padding: 0 1rem;
+}
+
 p,
 span {
   font-family: 'Codec Pro';
@@ -94,6 +97,7 @@ p,
 header a,
 .rtc--main-hero-info-h2 {
   color: var(--rtc-primary-color);
+  text-align: center;
 }
 
 .rtc--header-logo,
@@ -180,14 +184,14 @@ header a,
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0 2rem;
-  text-align: center;
+  padding: 0 1rem;
 }
 
 .rtc--main-about-info-h2,
 .rtc--main-demo-info-h2,
 .rtc--footer-contact-info-h2 {
   color: var(--rtc-secondary-color);
+  text-align: center;
 }
 
 .rtc--footer {
@@ -195,6 +199,7 @@ header a,
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  padding-bottom: 4rem;
 }
 
 .rtc--footer-contact-info {
@@ -224,15 +229,24 @@ header a,
   height: 25px;
 }
 
-@media screen and (min-width: 331px) {
+@media screen and (min-width: 320px) {
   .rtc--header-logo-h1 {
     font-size: var(--rtc-font-size-h1-s);
   }
+
+  .rtc--main-about-info,
+  .rtc--main-demo-info {
+    padding: 0 2rem;
+  }
 }
 
-@media screen and (min-width: 561px) {
+@media screen and (min-width: 540px) {
   body {
     margin: 0 2rem;
+  }
+
+  header {
+    gap: 2.5rem;
   }
 
   h2 {
@@ -250,7 +264,7 @@ header a,
   }
 
   .rtc--main-about-info {
-    padding: 2rem 4rem 8rem 4rem;
+    padding: 0 4rem;
   }
 }
 
