@@ -70,7 +70,7 @@ span {
 
 h2,
 p {
-  line-height: 1.15;
+  line-height: 1.25;
 }
 
 p {
@@ -81,7 +81,7 @@ p,
 span {
   font-family: 'Codec Pro';
   font-size: var(--rtc-font-size-p-xs);
-  font-weight: 900;
+  font-weight: 600;
 }
 
 span:hover {
@@ -141,12 +141,13 @@ header a,
   gap: 4rem;
 }
 
-.rtc--main-hero-info_container,
-.rtc--main-demo-info_container {
+.rtc--main-hero-info,
+.rtc--main-demo-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .rtc--main-hero-info-button {
@@ -179,12 +180,15 @@ header a,
   flex-direction: column;
 }
 
-.rtc--main-about-info,
-.rtc--main-demo-info {
+.rtc--main-about-info {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 0 1rem;
+}
+
+.rtc--main-about-info-h2 {
+  padding-bottom: 1rem;
 }
 
 .rtc--main-about-info-h2,
@@ -251,6 +255,7 @@ header a,
 
   h2 {
     font-size: var(--rtc-font-size-h2-m);
+    padding-bottom: 1.5rem;
   }
 
   .rtc--header-nav-list {
@@ -266,6 +271,11 @@ header a,
   .rtc--main-about-info {
     padding: 0 4rem;
   }
+
+  .rtc--main-demo-img {
+    width: 16rem;
+    height: 20rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -274,6 +284,7 @@ header a,
     flex-direction: row;
     justify-content: space-between;
     padding-right: 0;
+    padding-bottom: 6rem;
   }
 
   h2 {
@@ -281,34 +292,45 @@ header a,
   }
 
   p {
-    font-size: var(--rtc-font-size-p-s);
     line-height: 1.25;
   }
 
-  .rtc--main-hero {
+  .rtc--main-hero,
+  .rtc--main-demo {
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    align-items: center;
     gap: 0;
-    padding-top: 4rem;
+  }
+
+  .rtc-slide {
+    padding-bottom: 10rem;
   }
 
   .rtc-half {
     width: 50%;
   }
 
-  .rtc--main-hero-info_container {
-    gap: 3.5rem;
-    padding-top: 4rem;
+  .rtc--main-about-info {
+    padding: 2rem 4rem 0 4rem;
   }
 
-  .rtc--main-about-info {
-    padding: 2rem 6rem 8rem 6rem;
+  .rtc--footer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .rtc--footer-logo {
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 850px) {
   h2 {
     font-size: var(--rtc-font-size-h2-xl);
+  }
+
+  p {
+    font-size: var(--rtc-font-size-p-s);
   }
 
   .rtc--header-nav a,
@@ -321,13 +343,17 @@ header a,
     padding-right: 2rem;
   }
 
-  .rtc--main-hero-info_container {
+  .rtc--main-hero-info {
     gap: 4rem;
-    padding-top: 6rem;
   }
 
   .rtc--main-hero-img {
-    width: 20rem;
+    width: 18rem;
+    height: 20rem;
+  }
+
+  .rtc--main-demo-img {
+    width: 18rem;
     height: 22rem;
   }
 }
@@ -335,6 +361,10 @@ header a,
 @media screen and (min-width: 1024px) {
   span {
     font-size: var(--rtc-font-size-p-s);
+  }
+
+  .rtc-slide {
+    padding-bottom: 12rem;
   }
 
   .rtc--main-hero-info-button {
@@ -352,11 +382,19 @@ header a,
 }
 
 @media screen and (min-width: 1200px) {
+  p {
+    font-size: var(--rtc-font-size-p-m);
+  }
+
   .rtc--header-nav-list {
     gap: 8rem;
   }
 
-  .rtc--main-hero-info_container {
+  .rtc-slide {
+    padding-bottom: 16rem;
+  }
+
+  .rtc--main-hero-info {
     gap: 6rem;
     padding-top: 6rem;
   }
