@@ -27,6 +27,11 @@
   --rtc-font-size-p-xs: 14px;
   --rtc-font-size-p-s: 16px;
   --rtc-font-size-p-m: 20px;
+
+  --rtc-height-logo: 30px;
+  --rtc-height-network-logo: 25px;
+  --rtc-width-logo: 30px;
+  --rtc-width-network-logo: 25px;
 }
 
 * {
@@ -109,8 +114,8 @@ header a,
 
 .rtc--header-logo-img,
 .rtc--footer-logo-img {
-  width: 30px;
-  height: 30px;
+  width: var(--rtc-width-logo);
+  height: var(--rtc-height-logo);
 }
 
 .rtc--header-logo-h1 {
@@ -229,8 +234,8 @@ header a,
 
 .rtc--footer-contact-networks-img {
   border-radius: 0.5rem;
-  width: 25px;
-  height: 25px;
+  width: var(--rtc-width-network-logo);
+  height: var(--rtc-height-network-logo);
 }
 
 @media screen and (min-width: 320px) {
